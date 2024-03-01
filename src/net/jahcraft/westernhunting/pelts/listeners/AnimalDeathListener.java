@@ -1,7 +1,5 @@
 package net.jahcraft.westernhunting.pelts.listeners;
 
-import java.util.ArrayList;
-
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
@@ -59,18 +57,13 @@ public class AnimalDeathListener implements Listener {
 			e.getEntityType() != EntityType.LLAMA) return;
 		
 		if (attacker == null) return;
-			
-		ArrayList<ItemStack> toRemove = new ArrayList<>();
-		
+					
 		if (e.getDrops() != null) {
 			for (ItemStack i : e.getDrops()) {
 				if (i.getType() == Material.LEATHER ||
 					i.getType() == Material.RABBIT_HIDE) {
-					toRemove.add(i);
+					e.getDrops().remove(i);
 				}
-			}
-			for (ItemStack i : toRemove) {
-				e.getDrops().remove(i);
 			}
 		}
 		
