@@ -10,6 +10,7 @@ import net.jahcraft.westernhunting.fish.listeners.FishDeathListener;
 import net.jahcraft.westernhunting.fish.listeners.FishExchangeListener;
 import net.jahcraft.westernhunting.fish.listeners.FishListListener;
 import net.jahcraft.westernhunting.fish.listeners.FishingListener;
+import net.jahcraft.westernhunting.main.commands.HuntingExchange;
 import net.jahcraft.westernhunting.pelts.commands.GetPelt;
 import net.jahcraft.westernhunting.pelts.listeners.AnimalDeathListener;
 import net.jahcraft.westernhunting.pelts.listeners.PeltExchangeListener;
@@ -29,6 +30,8 @@ public class Main extends JavaPlugin {
 			return;
 			
 		}
+		
+		getCommand("huntingexchange").setExecutor(new HuntingExchange());
 		
 		//JAHFISH
 				try {
