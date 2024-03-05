@@ -31,9 +31,9 @@ public class HuntingExchange implements CommandExecutor {
 		}
 		
 		if (args[0].equalsIgnoreCase("fish")) {
-			((Player) sender).openInventory(PeltExchange.createInv((Player)sender));
-		} else {
 			((Player) sender).openInventory(FishExchange.createInv((Player)sender));
+		} else {
+			((Player) sender).openInventory(PeltExchange.createInv((Player)sender));
 		}
 		
 		return true;

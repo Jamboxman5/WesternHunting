@@ -18,7 +18,7 @@ public class FishPriceCalculator {
 		
 		double multiplier = (((double)oz / 35.0) * ((double) starCount)*3);
 		price = price * multiplier;
-		price = (Math.round(price / 10.0) * 10.0);
+		price = (Math.round(price / 10.0) * 5.0);
 		
 		return price;
 		
@@ -32,7 +32,7 @@ public class FishPriceCalculator {
 		
 		double multiplier = (((double)oz / 35.0) * ((double) starCount)*3);
 		price = price * multiplier;
-		price = (Math.round(price / 10.0) * 10.0);
+		price = (Math.round(price / 10.0) * 5.0);
 		
 		return price;
 		

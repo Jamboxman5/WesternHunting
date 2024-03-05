@@ -16,7 +16,7 @@ public class PeltPriceCalculator {
 		
 		double multiplier = (((double) starCount)*3);
 		price = price * multiplier;
-		price = (Math.round(price / 10.0) * 10.0);
+		price = (Math.round(price / 10.0) * 5.0);
 		
 		return price;
 		
@@ -28,9 +28,9 @@ public class PeltPriceCalculator {
 		
 		price = PeltDefaults.priceStorage.get(displayName);
 		
-		double multiplier = ((double) starCount)*2.0;
+		double multiplier = ((double) starCount)*2;
 		price = price * multiplier;
-		price = (Math.round(price / 10.0) * 10.0);
+		price = (Math.round(price / 10.0) * 5.0);
 		
 		return price;
 		

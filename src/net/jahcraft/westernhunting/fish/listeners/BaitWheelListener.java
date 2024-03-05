@@ -5,7 +5,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class BaitWheelListener implements Listener {
 	
@@ -16,7 +15,7 @@ public class BaitWheelListener implements Listener {
 	
 	@EventHandler
 	public void clickWheel(InventoryClickEvent e) {
-		ItemStack[] contents = e.getWhoClicked().getInventory().getContents();
+		//ItemStack[] contents = e.getWhoClicked().getInventory().getContents();
 	}
 	
 	@EventHandler
