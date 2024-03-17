@@ -13,22 +13,14 @@ public class HuntingExchange implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (!label.equalsIgnoreCase("huntingexchange")) return false;
+		if (!label.equalsIgnoreCase("hunting")) return false;
 		if (!(sender instanceof Player)) return true;
 		Player p = (Player) sender;
-		if (!p.hasPermission("westernhunting.exchange")) {
+		if (!p.hasPermission("westernhunting.hunting")) {
 			sender.sendMessage(ChatColor.RED + "You don't have permission to do that!");
 			return true;
 		}
 		
-		if (args.length != 1) {
-			sender.sendMessage(ChatColor.RED + "Usage: /huntingexchange <fish/pelts>");
-			return true;
-		}
-		if (!args[0].equalsIgnoreCase("pelts") && !args[0].equalsIgnoreCase("fish")) {
-			sender.sendMessage(ChatColor.RED + "Usage: /huntingexchange <fish/pelts>");
-			return true;
-		}
 		
 		if (args[0].equalsIgnoreCase("fish")) {
 			((Player) sender).openInventory(FishExchange.createInv((Player)sender));
