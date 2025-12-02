@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import net.jahcraft.westernhunting.pelts.util.Colors;
 
-public class HuntingMenu {
+public class TrapperMenu {
 	
 	public static Inventory inv;
 	
@@ -23,7 +23,7 @@ public class HuntingMenu {
 		
 		ItemStack item = new ItemStack(Material.ORANGE_STAINED_GLASS_PANE);
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName("");
+		meta.setDisplayName(" ");
 		item.setItemMeta(meta);
 		
 		for (int i = 0; i < 9; i++) {
@@ -45,6 +45,11 @@ public class HuntingMenu {
 		meta.setDisplayName(Colors.GOLD + "Exchange Fish");
 		item.setItemMeta(meta);
 		inv.setItem(15, item);
+
+        item.setType(Material.BARRIER);
+        meta.setDisplayName(Colors.BRIGHTRED + "Exit");
+        item.setItemMeta(meta);
+        inv.setItem(22, item);
 		
 		
 	}

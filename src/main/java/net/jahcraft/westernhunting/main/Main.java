@@ -10,7 +10,7 @@ import net.jahcraft.westernhunting.fish.listeners.FishDeathListener;
 import net.jahcraft.westernhunting.fish.listeners.FishExchangeListener;
 import net.jahcraft.westernhunting.fish.listeners.FishListListener;
 import net.jahcraft.westernhunting.fish.listeners.FishingListener;
-import net.jahcraft.westernhunting.main.commands.HuntingExchange;
+import net.jahcraft.westernhunting.main.commands.TrapperCommand;
 import net.jahcraft.westernhunting.pelts.commands.GetPelt;
 import net.jahcraft.westernhunting.pelts.listeners.AnimalDeathListener;
 import net.jahcraft.westernhunting.pelts.listeners.PeltExchangeListener;
@@ -31,8 +31,10 @@ public class Main extends JavaPlugin {
 			
 		}
 		
-		getCommand("huntingexchange").setExecutor(new HuntingExchange());
-		
+		getCommand("trapper").setExecutor(new TrapperCommand());
+		TrapperMenu.createMenu();
+        getServer().getPluginManager().registerEvents(new TrapperListener(), this);
+
 		//JAHFISH
 				try {
 					//COMMANDS
@@ -69,6 +71,8 @@ public class Main extends JavaPlugin {
 					e.printStackTrace();
 					
 				}
+
+                Bukkit.getLogger().info("WesternHunting Loaded and Enabled!");
 	}
 	
 	@Override 

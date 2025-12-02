@@ -1,5 +1,6 @@
 package net.jahcraft.westernhunting.pelts.listeners;
 
+import net.jahcraft.westernhunting.main.TrapperMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -49,6 +50,7 @@ public class PeltExchangeListener implements Listener {
 		}
 		if (e.getSlot() == 45) {
 			p.closeInventory();
+            p.openInventory(TrapperMenu.inv);
 			return;
 		}
 		if (e.getSlot() == 53) {

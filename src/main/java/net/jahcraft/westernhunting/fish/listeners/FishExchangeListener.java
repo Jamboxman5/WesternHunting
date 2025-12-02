@@ -1,5 +1,6 @@
 package net.jahcraft.westernhunting.fish.listeners;
 
+import net.jahcraft.westernhunting.main.TrapperMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -55,7 +56,8 @@ public class FishExchangeListener implements Listener {
 		}
 		if (e.getSlot() == 45) {
 			p.closeInventory();
-			return;
+            p.openInventory(TrapperMenu.inv);
+            return;
 		}
 		if (e.getSlot() == 53) {
 			p.closeInventory();
