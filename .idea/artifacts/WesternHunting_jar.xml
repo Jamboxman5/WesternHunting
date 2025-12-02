@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="WesternHunting:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WesternHunting_jar</output-path>
+    <root id="archive" name="WesternHunting.jar">
+      <element id="module-output" name="WesternHunting" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/de/tr7zw/item-nbt-api-plugin/2.11.1/item-nbt-api-plugin-2.11.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
